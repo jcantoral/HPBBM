@@ -1,0 +1,10 @@
+## Instructions for Assignment 1
+
+### Problem 7. Write a program that ask the user to type (keyboard input) a DNA sequence and the name of an
+enzyme and returns:
+
+1. composition of the DNA sequence (% of each base)
+2. indicate if the DNA sequence will be digested by the selected enzyme
+3. indicate the (first) cutting position of the selected restriction enzyme, if applicable.
+
+To make things simple the user can only choose one of these four enzymes: EcoRI, BamHI, HindIII and NotI.
