@@ -1,5 +1,5 @@
 #HPBBM Assignment 1 - Jesus Cantoral draft
-#Firstly, the scripts requests the user to input the DNA sequence
+#Firstly, the script requests the user to input the DNA sequence
 DNAseq=input("Welcome, please type DNA sequence and hit enter: ")
 
 #The script then determines the A/G/C/T % content, turning it to all uppercase (just in case) and counting each base (using a .count() funcion), then dividing by the length (using a len() function) of the "DNAseq" input chain and multiplying by 100, and rounding to two decimal points for simplicity.
