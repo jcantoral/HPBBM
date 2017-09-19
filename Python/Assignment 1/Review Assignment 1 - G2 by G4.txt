@@ -1,0 +1,22 @@
+# My Group number: G4
+# My Group members: Alberto Ferrera, Leticia Rodríguez and Jesús Cantoral
+# Group evaluated: G2
+
+# Commented code: 1
+# Commented code: Every step is well explained
+
+# Code Logic: 2
+# Code Logic: The code is logic.
+
+# Variable names, code indentation,...: 0.5
+# Variable names, code indentation,...:
+	Issues:
+	1. Line 5: The method 'replace' is correct but not necessary here. 
+	2. Lines 16-19 and 24-25: Use of function 'print' properties not seen in class (printing the value of variables inside a print string)
+	3. The program doesn't show the possible restriction enzymes to the user. This is the most important reason to the grade.
+	4. Last line: This is not explained to the user (but it is to the programmer).
+	
+In general, we think the script is well written and explained for the programmer, but not for the user.
+
+# Does the script work?:4
+# Does the script work?: The script works properly and it doesn't make any mistakes.
