@@ -1,0 +1,10 @@
+Exercise 2. Lets improve the script you submitted for the Unit 1 assignment using the tools learned in Unit2 (flow
+control): Write a program that ask the user for a DNA sequence (keyboard input) and do the following:
+
+  1. If the provided sequence is RNA, warn the user, but translate it to DNA and continue.
+  2. If the sequence provided by the user is not DNA or RNA (protein or other...) inform the user that it only
+accepts DNA sequences and stop the program.
+  3. Report detailed sequence statistics: sequence length, % of each base and % of each dinucleotide
+  4. Check if there are restriction sites for any of the following restriction enzymes: EcoRI (GAATTC), BamHI
+(GGATCC), HindIII (AAGCTT) and NotI (GCGGCCGC).
+  5. If any of these enzymes cut the DNA report ALL the sites where it cuts.
