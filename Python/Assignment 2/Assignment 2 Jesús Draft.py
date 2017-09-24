@@ -2,9 +2,13 @@
 #Firstly, the scripts requests the user to input the DNA sequence
 DNAinput=input("Welcome, please type sequence and hit enter: ").upper()
 
-#Aas=["R","N","D","Q","E","H","I","L","K","M","F","P","S","W","Y","V"]. In case there was a better way to write line 7.
+Aas=["R","N","D","Q","E","H","I","L","K","M","F","P","S","W","Y","V"] #Dictionary containing aminoacids other than A,C,G,T (which could equally be nucleotides).
+AaCounter=0
+for AaCheck in range(len(Aas)): #This for loop will search through DNAinput to check whether any aminoacids (from the Aas dictionary) are present.
+        if (Aas[AaCheck] in DNAinput) == True:
+                AaCounter=AaCounter+1 #If any aminoacids are found, this will increase the value of AaCounter. Any >0 would signify at least one type of Aa present in the sequence.
 
-if (("R" in DNAinput) or  ("N" in DNAinput) or ("D" in DNAinput or ("Q" in DNAinput) or ("E" in DNAinput) or ("H" in DNAinput) or ("I" in DNAinput) or ("L" in DNAinput) or ("K" in DNAinput) or ("M" in DNAinput) or ("F" in DNAinput)) or ("M" in DNAinput) or ("F" in DNAinput) or ("P" in DNAinput) or ("S" in DNAinput) or ("W" in DNAinput) or ("Y" in DNAinput) or ("V" in DNAinput)) == False:      
+if AaCounter == 0: #(i.e. no aminoacids in sequence)
     
         if ("U" in DNAinput) and ("T" in DNAinput) == True: #The user could have introduced both Ts and Us so the script warns the user but carries on replacing Us into Ts.
             print ("Both Thymidine and Uracil found in your sequence, it seems either your sequence is wrong or the Nobel is near.\n The script will RT your Uracils into Thymidines, though.")
