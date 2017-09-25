@@ -7,7 +7,7 @@ AaCounter=0
 for AaCheck in range(len(Aas)): #This for loop will search through DNAinput to check whether any aminoacids (from the Aas dictionary) are present.
         if (Aas[AaCheck] in DNAinput) == True:
                 AaCounter=AaCounter+1 #If any aminoacids are found, this will increase the value of AaCounter. Any >0 would signify at least one type of Aa present in the sequence.
-
+#This approach only excludes proteins, what about if the input included numbers or other invalid characters?
 if AaCounter == 0: #(i.e. no aminoacids in sequence)
     
         if ("U" in DNAinput) and ("T" in DNAinput) == True: #The user could have introduced both Ts and Us so the script warns the user but carries on replacing Us into Ts.
@@ -27,7 +27,7 @@ if AaCounter == 0: #(i.e. no aminoacids in sequence)
                 print (round((DNAinput.count(BaseCounter))/len(DNAinput)*100,2),"%",BaseCounter)
                 
         print("\n--Dinucleotide composition--") #Using the same philosphy as for the Sequence statistics, but with Dinucleotides.
-        DiNts=["AA","AC","AG","AT","CC","CG","CT","GG","GT","TT"]
+        DiNts=["AA","AC","AG","AT","CC","CG","CT","GG","GT","TT"] #Not all DiNts are included! Better use Leti's approach of generating pairs of elements from a list.
         for DiNtsCounter in DiNts:
             print(round(DNAinput.count(DiNtsCounter)*100/(len(DNAinput)/2),2),"%",DiNtsCounter)
 
