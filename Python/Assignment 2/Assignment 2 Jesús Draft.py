@@ -16,9 +16,7 @@ if AaCounter == 0: #(i.e. no aminoacids in sequence)
         elif ("U" in DNAinput) == True:
             print("Your sequence is RNA, it will be retrotranscribed into DNA and the script will proceed")
 
-        Ribonucleotides="AUGC" #This is what RNA can contain
-        Transcript=str.maketrans(Ribonucleotides,"ATGC") #And these are the corresponding retrotranscribed nucleotides.
-        DNAinput=DNAinput.translate(Transcript) #The .translate() method is what actually converts one string into another following the rules established in str.maketrans()
+        DNAinput=DNAinput.replace("U","T") #The .replace() method will replace [as you would expect] Us for Ts.
 
         print("\n -- Sequence statistics: --") #Nearly identical to Assignment 1.
         print("Sequence:", DNAinput)
