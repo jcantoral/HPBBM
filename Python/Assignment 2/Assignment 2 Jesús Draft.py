@@ -21,9 +21,10 @@ if AaCounter == 0: #(i.e. no aminoacids in sequence)
         print("\n -- Sequence statistics: --") #As Assignment 1.
         print("Sequence:", DNAinput)
         print("Sequence length:",len(DNAinput),"bp.")
-        for BaseCounter in range(4): #This avoids writing the same code for all four bases.
-            Bases=["A","G","C","T"]
-            print (round((DNAinput.count(Bases[BaseCounter]))/len(DNAinput)*100,2),"%",Bases[BaseCounter])
+        
+        Bases=["A","G","C","T"] #The list contains all four DNA bases
+        for BaseCounter in Bases: #This for loop avoids writing the same code for each base.
+                print (round((DNAinput.count(BaseCounter))/len(DNAinput)*100,2),"%",BaseCounter)
                 
         print("\n--Dinucleotide composition--") #Using the same philosphy as for the Sequence statistics, but with Dinucleotides.
         DiNts=["AA","AC","AG","AT","CC","CG","CT","GG","GT","TT"]
