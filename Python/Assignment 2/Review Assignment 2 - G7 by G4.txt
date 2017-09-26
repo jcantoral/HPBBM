@@ -1,0 +1,21 @@
+# My Group number: G4
+# My Group members: Alberto Ferrera, Leticia Rodríguez and Jesús Cantoral
+# Group evaluated: G7
+
+# Commented code: 1/1
+
+# Commented code: 
+
+# Code Logic: 2/2
+# Code Logic: There is a non usable condition from line 20-28.
+
+
+# Variable names, code indentation,...: 1/1
+# Variable names, code indentation,...:
+	
+
+# Does the script work?: 3/4
+# Does the script work?: 
+		1.If you type one nucleotide or a number, the script crushes.
+		2. If you input a RNA sequence, the script doesn't return the DNA sequence.
+		3. If you put letters that don't correspond to Nitrogenous Bases or Aminoacid, the script doesn't warn about it and runs.
