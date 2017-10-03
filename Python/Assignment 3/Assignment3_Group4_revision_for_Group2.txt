@@ -1,0 +1,16 @@
+# My Group number: Group 4
+# My Group members: Jesus Cantoral, Alberto Ferrera and Leticia Rodriguez
+# Group evaluated: Group 2
+
+# Commented code (Grade): 2
+# Commented code (justification of your grade): Somewhat a bit undercommented, yet correct. Basic Python knowledge or a quick lookup in the documentation would be enough to understand the code.
+
+# Code Logic (Grade): 2
+# Code Logic (justification of your grade): We find the code to be neat and very well structured.
+
+# Variable names, code indentation,... (Grade): 2
+# Variable names, code indentation,... (justification of your grade): Names are informative and intuitive to the programmer.
+
+# Does the script work? (Grade): 2
+# Does the script work? (justification of your grade): The script runs fast. The output file and sequences are correct. It is not required, but maybe using a FASTA format (sequences include a first >Title line). A nice print() message informs the user via the Python interpreter the script has ended. Perhaps informing the actual name of the file could be useful (anyway, a new file appears). Overall, we would like to congratulate Group 2 for their work.
+
