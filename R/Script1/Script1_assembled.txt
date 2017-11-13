@@ -165,3 +165,7 @@ DF.patients$Sex <- c(matrix.15[which(matrix.15[,2] == 63), 3],
 hr.o <- tab1[order(tab1[,2],tab1[,1])]
 age.o <- sort(tab1[,2])
 tab.o <- cbind(age.o,hr.o)
+
+#Me parece más limpio lo que habíamos hablado de reordenar directamente la tabla de Alberto. He estado mirando lo que mandó el por captura y realmente con 1 línea vale:
+matrix.15ord <- matrix.15[order(matrix.15[,2],matrix.15[,1]),]
+#pero checkeadlo por si acaso.
