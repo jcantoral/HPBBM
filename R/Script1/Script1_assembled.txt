@@ -94,6 +94,12 @@ Ana <- data.frame(Name = "Ana", "Hr" = 69, Age = 63)
 Carmen <- data.frame(Name = "Carmen", "Hr" = 76, Age = 47)
 DF2.patients <- rbind(Juan, Ana, Carmen)
 
+DF.patients1 <- data.frame(row.names = c(1,2,3))
+DF.patients1$"Hear rate" <- hr2
+DF.patients1$Age <- c(rep(63,2), 47)
+DF.patients1$Name<- names.patients
+#Se me ha ocurrido esta otra forma que seria prácticamente igual a la del ejercicio anterior, pero vamos que coged la que queráis.
+
 #We could not do this with a matrix, because in a matrix all elements must
 ##have the same class
 
