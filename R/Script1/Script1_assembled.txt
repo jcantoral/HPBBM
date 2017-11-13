@@ -133,7 +133,7 @@ matrix.15 <- matrix.all[which(matrix.all[ , 2] > 15), ]
 
 #6.17
 sex <- c("M", "F")[c(1, 2, 1, 1, 2, 2, 1, 1, 2, 2)]
-matrix.15sex <- cbind(matrix.15, sex[which(matrix.all[ , 2] > 15)])
+matrix.15 <- cbind(matrix.15, sex[which(matrix.all[ , 2] > 15)])
 
 #6.18
 DF.patients$Sex <- c(matrix.15[which(matrix.15[,2] == 63), 3], 
@@ -141,6 +141,21 @@ DF.patients$Sex <- c(matrix.15[which(matrix.15[,2] == 63), 3],
 
 
 #7.Sort and order
-#by age
-matrix.15[order(matrix.15[,2]),]
-#I am stuck here. I do not know how to order within the age
+#7.1. Using the matrix created in exercise 6, 6.15,
+##create a new matrix that contains the exact same data3
+##but such that the values are ordered in such a way
+##that you first order by age and then by heart rate.
+##So you want the youngest individuals on top, and within age,
+##you wantthe slowest heart rates on top. So we would get this:
+## hr age
+## [1,] 67 40
+## [2,] 68 40
+## [3,] 69 40
+## [4,] 75 40
+## [5,] 76 47
+## [6,] 62 63
+## [7,] 69 63
+
+hr.o <- tab1[order(tab1[,2],tab1[,1])]
+age.o <- sort(tab1[,2])
+tab.o <- cbind(age.o,hr.o)
