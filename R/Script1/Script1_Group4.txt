@@ -1,4 +1,6 @@
-# R script 1
+# R script 1 Group 4
+# Jesus Cantoral, Alberto Ferrera, Leticia Rodriguez
+
 #1. Scripts
 #1.1
 
@@ -8,8 +10,8 @@ summary(x)
 
 # 1.2
 #1.2.1 Either copying the code or 
-##by opening <kbd>File > Open File (Ctrl+O)</kbd>,
-##then selecting and running as <kbd>Ctrl + Enter</kbd>
+##by opening File > Open File (Ctrl+O),
+##then selecting and running as Ctrl + Enter
 #1.2.2 source("path/to/file.R", echo=TRUE) 
 #1.2.3 $R --vanilla < path/to/file.R 
 # 2. Some read.table operations
@@ -24,7 +26,7 @@ d4 <- read.table ("d4.txt", header = TRUE, comment.char="@")
 
 # 3. Packages
 
-#3.1 Running a sessionInfo() command specifies
+#3.1 Running a "sessionInfo()" command specifies
 ##versions of all packages that are installed.
 ##Up-to-date version is 2.4.0.
 
@@ -89,19 +91,14 @@ DF.patients$"Hear rate" <- hr2
 DF.patients$Age <- c(rep(63,2), 47)
 
 #6.7
-Juan <- data.frame(Name = "Juan", "Hr" = 62, Age = 63)
-Ana <- data.frame(Name = "Ana", "Hr" = 69, Age = 63)
-Carmen <- data.frame(Name = "Carmen", "Hr" = 76, Age = 47)
-DF2.patients <- rbind(Juan, Ana, Carmen)
-
 DF.patients1 <- data.frame(row.names = c(1,2,3))
 DF.patients1$"Hear rate" <- hr2
 DF.patients1$Age <- c(rep(63,2), 47)
 DF.patients1$Name<- names.patients
-#Se me ha ocurrido esta otra forma que seria prácticamente igual a la del ejercicio anterior, pero vamos que coged la que queráis.
 
-#We could not do this with a matrix, because in a matrix all elements must
-##have the same class
+#We couldn't have done this with a matrix,
+because all elements in the matrix must
+be of the same class (and it's not the case).
 
 #6.8
 ##Index
@@ -133,9 +130,8 @@ matrix.all <- matrix(c(hr, age), ncol=2)
 matrix.15 <- matrix.all[which(matrix.all[ , 2] > 15), ]
 
 #6.16
-##They could correspond to the individuals above, but there is one value that
-##does not match, the last on. Values for 10 individuals are expected,
-##but the sex vector contains 11 values.
+#All values but the last may be possible,
+so we beleive the last element needs to be deleted.
 
 #6.17
 sex <- c("M", "F")[c(1, 2, 1, 1, 2, 2, 1, 1, 2, 2)]
@@ -148,24 +144,4 @@ DF.patients$Sex <- c(matrix.15[which(matrix.15[,2] == 63), 3],
 
 #7.Sort and order
 #7.1. Using the matrix created in exercise 6, 6.15,
-##create a new matrix that contains the exact same data3
-##but such that the values are ordered in such a way
-##that you first order by age and then by heart rate.
-##So you want the youngest individuals on top, and within age,
-##you wantthe slowest heart rates on top. So we would get this:
-## hr age
-## [1,] 67 40
-## [2,] 68 40
-## [3,] 69 40
-## [4,] 75 40
-## [5,] 76 47
-## [6,] 62 63
-## [7,] 69 63
-
-hr.o <- tab1[order(tab1[,2],tab1[,1])]
-age.o <- sort(tab1[,2])
-tab.o <- cbind(age.o,hr.o)
-
-#Me parece más limpio lo que habíamos hablado de reordenar directamente la tabla de Alberto. He estado mirando lo que mandó el por captura y realmente con 1 línea vale:
 matrix.15ord <- matrix.15[order(matrix.15[,2],matrix.15[,1]),]
-#pero checkeadlo por si acaso.
