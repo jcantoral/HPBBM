@@ -1,6 +1,6 @@
 #R Exc2 Jesus
 rm(list=ls()) #Clean workspace
-#Remember to setwd() !!!
+
 #Section 1: The data
 
 leuk.dat <- read.table("leukemia.data.txt", row.names = 1)
@@ -35,19 +35,19 @@ abline(lm(leuk.dat.m["G1",]~leuk.dat.m["G2124",]), lty = 2)
 
 #3 Conditioning plots:
 #Figure 2
-coplot(leuk.dat.m["G2600",]~leuk.dat.m["G2124",] | sex,
+coplot(leuk.dat.m["G1",]~leuk.dat.m["G2124",] | sex,
        panel= panel.smooth, xlab= "PTEN", ylab= "HK-1")
 
 #Figure 3
 library("lattice")
-xyplot(leuk.dat.m["G2600",]~leuk.dat.m["G2124",] | sex,
+xyplot(leuk.dat.m["G1",]~leuk.dat.m["G2124",] | sex,
        xlab= "PTEN", ylab= "HK-1",
        panel = function(x, y) {
          panel.xyplot(x, y)
          panel.loess(x, y) })
 
 #Figure 4
-xyplot(leuk.dat.m["G2600",]~leuk.dat.m["G2124",] | sex,
+xyplot(leuk.dat.m["G1",]~leuk.dat.m["G2124",] | sex,
        xlab= "PTEN", ylab= "HK-1",
        panel = function(x, y) {
          panel.xyplot(x, y)
@@ -70,7 +70,6 @@ fig5 #To plot fig5
 p.v.t <- apply(leuk.dat.m, 1,
                   function(x) t.test (x~leuk.class)$p.value)
 
-
 sorted.p <- sort (p.v.t)
 sorted.adj.p <- p.adjust(sorted.p,
                          method = "fdr")
@@ -78,6 +77,7 @@ sorted.adj.p <- p.adjust(sorted.p,
 cut.05 <- p.v.t[names(sorted.adj.p[which(sorted.adj.p > 0.05)[1]-1])]
 cut.15 <- p.v.t[names(sorted.adj.p[which(sorted.adj.p > 0.15)[1]-1])]
 
+#Figure 6
 hist(p.v.t, breaks = 50, freq= FALSE,
      xlab = "p-value", main = "P-values from t-test") ; box()
 axis(2, at=1)
@@ -93,8 +93,8 @@ legend(0.4, y=8, lty=c(3,4), col=c("red","blue"),
 
 w.v.t <- apply(leuk.dat.m, 1,
                function(x) wilcox.test (x~leuk.class)$p.value)
-
+#Figure 7
 plot(w.v.t ~ p.v.t, rug= TRUE, cex=0.5,
      xlab="p-values from t-test", ylab= "p-values from Wilcoxon")
 abline(v=cut.15, col="blue", lty = 4)
-rug(w.v.t,side=2); rug(p.v.t, side = 1)         
+rug(w.v.t,side=2); rug(p.v.t, side = 1)
