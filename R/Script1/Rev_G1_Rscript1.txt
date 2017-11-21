@@ -1,0 +1,11 @@
+R assignment 1 -- Group 1 correction (reviewed by Group 4)
+
+We believe the excersices are correctly answered excepting two:
+
+>>Exc 2 is incorrectly answered. Group 1 has centered in answering how the original table is modified using R, and has ommited what was actually requested: how to get R to properly read these modified files.
+
+>>Exc 6.6: The dataframe is originated by converting a matrix, not by creating a dataframe from scratch.
+
+
+We propose a 9.5 grade.
+
