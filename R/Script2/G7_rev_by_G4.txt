@@ -1,0 +1,18 @@
+##Group 7 by Group 4 revision -- R script 2 Graphics
+
+The data: Data reading and manipulation.  +2
+Figure 1a, boxplot: Correct and clear  +3
+Figure 1b, scatterplot with symbols: Correct and clear.  +3
+Sect3, Fig2 (conditioning plot). Correct +2
+Sect3, Fig3 (conditioning plot with smooth line). Correct +2
+Sect3, Fig4 (conditioning plot with regression line). Correct +2 
+Sect3, Fig5 (conditioning plot with ggplot2). Correct and clear. +3
+Sect4, Fig6 (histogram of p values). Correct and clear. +2
+Sect5, Fig7 (scatterplot of p values). Correct and clear 0
+Issues:
+	>Lines 76 and 77: innecesary and problematic plus sign.
+	>Line 77 "corte.15" used instead of the previously created
+	"cut.15".
+
+Overall grade: 19/21.
+
