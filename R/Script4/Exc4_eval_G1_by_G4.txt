@@ -1,0 +1,36 @@
+#Group 1 eval by Group 4
+##Exercise 4 (permafrost et al.)
+###Jesus Cantoral, Alberto Ferrera, Leticia Rodriguez
+
+>Files are correctly read +4
+>Lengths of seqs OK +4
+>Frequencies of Ts OK +4
+>Summaries OK +4
+>Org, logic and results +4
+
+
+###Minor comments:
+
+>Perhaps using the "stringr" package is not that convenient.
+It requires its intallation. Grep is present in R out-of-the-box.
+Yes, using grep for this not optimal, but it would do the job without
+any aditional packages. Anyway, "stringr" works too and it's correct.
+
+>grepl is okay, but perhaps not necessary. After all, why not obtain
+the character vector directly, and not a logical vector?
+
+>Good use of user-defined functions. Congrats on the use of vapply.
+>Nice use of "message" to help the user. Not required, but handy.
+>Could the prints in the last part be avoided?
+>The code is clean and straightforward, well structured and atomic
+thanks to those functions. Perhaps including another user-defined function
+to print the summary could have been appropriate too. Once again, not necessary.
+
+----
+
+Functions output seems correct. Nevertheless, we would like to suggest that,
+in the rubrica, the expected output is included so we can truly evaluate
+whether the output is correct.
+(We believe the output is correct because it matches ours, though psychic powers
+could be included for following years in this course).
+
